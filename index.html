@@ -1,250 +1,45 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Elie Haddad CV</title>
-  <!-- Add any necessary stylesheets here if they're not already included -->
+  <meta charset="UTF-8">
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Elie Haddad | AI &amp; Software Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
 </head>
-<!-- Updated Header Section -->
-<header class="site-header sticky-nav">
+
+<body class="opening hide-UI view-3D zoom-large data-close controls-close">
+
+  <!-- Floating Island Navigation Bar -->
+  <header class="site-header sticky-nav">
     <div class="header-container">
-      <a href="#" class="email-link" style="color: white; font-size: 20px; text-decoration: none;" >Elie Haddad
-      </a>
-      
-      
+      <div style="display: flex; flex-direction: column;">
+        <a href="#" class="email-link">Elie Haddad</a>
+        <span class="nav-subtitle">AI &amp; SOFTWARE ENGINEER &bull; ORACLE APEX</span>
+      </div>
       
       <!-- Right navigation links -->
       <nav class="nav-links">
-        <a href="#education" style="margin-left: -200px;">Education</span>
-        <a href="#experience">Experience</span>
+        <a href="#summary">Summary</a>
+        <a href="#experience">Experience</a>
+        <a href="#projects">Projects</a>
         <a href="#skills">Skills</a>
-        <a href="#projects">Projects</a> <!-- Merged skills link -->
+        <a href="#education">Education</a>
         <a href="#certifications">Certifications</a>
         <a href="#contact">Contact</a>
       </nav>
     </div>
   </header>
-  <script>
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener("click", function(e) {
-      e.preventDefault();
 
-      const targetId = this.getAttribute("href");
-      const targetElement = document.querySelector(targetId);
-
-      if (targetElement) {
-        const navbarHeight = document.querySelector(".site-header")?.offsetHeight || 0;
-        const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
-        const offsetPosition = elementPosition - navbarHeight;
-
-        window.scrollTo({
-          top: offsetPosition,
-          behavior: "smooth"
-        });
-
-        history.pushState(null, "", targetId);
-      }
-    });
-  });
-</script>
-  
-<style>
-    /* Updated CSS for centered name and merged skills */
-    html {
-    scroll-behavior: smooth; /* Enables smooth scrolling behavior */
-  }
-  .site-header {
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    backdrop-filter: blur(10px);
-    padding: 1rem 2rem;
-  }
-  
-  .header-container {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    max-width: 1400px;
-    margin: 0 auto;
-    position: relative; /* Added for proper centering */
-  }
-  
-  /* Sticky Header & Navbar Styles */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(12px); /* Softer blur effect */
-  padding: 1rem 2rem;
-  transition: all 0.3s ease-in-out;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
-}
-
-.header-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1400px;
-  margin: 0 auto;
-  position: relative;
-}
-
-/* Centered Site Title */
-.site-title {
-  position: absolute;
-  left: 50%;
-  transform: translateX(-50%);
-  font-size: 1.6rem;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-  color: #ffffff; /* White title for contrast */
-  transition: all 0.3s ease;
-  text-align: center;
-  z-index: 1001;
-}
-
-/* Navigation Links */
-.nav-links {
-  display: flex;
-  gap: 2rem;
-  list-style: none;
-  margin: 0;
-  padding: 0;
-}
-
-.nav-links a {
-  color: #ffffff; /* Light semi-transparent white */
-  text-decoration: none;
-  font-size: 0.9rem;
-  font-weight: 500;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
-  position: relative;
-  transition: color 0.3s ease;
-  padding: 0.5rem 1rem;
-}
-
-.nav-links a::after {
-  content: '';
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: -2px;
-  height: 2px;
-  background: #171953;
-  transform: scaleX(0);
-  transform-origin: center;
-  transition: transform 0.3s ease;
-}
-
-.nav-links a:hover,
-.nav-links a:focus {
-  color: #6a6ff5;
-}
-
-.nav-links a:hover::after {
-  transform: scaleX(1);
-}
-  
-  /* Responsive adjustments */
-  @media (max-width: 1024px) {
-    .header-container {
-      flex-direction: column;
-      align-items: center;
-      text-align: center;
-      gap: 1rem;
-    }
-    
-    .nav-links {
-      flex-direction: column;
-      gap: 0.5rem;
-    }
-  
-    
-    .site-title {
-      position: static;
-      transform: none;
-      margin: 1rem 0;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .site-title {
-      font-size: 1.2rem;
-    }
-    
-    .nav-links a {
-      font-size: 0.9rem;
-      padding: 0.3rem 0.6rem;
-    }
-  }
-  /* Add/modify these styles in your existing navbar CSS */
-  .navbar__link {
-    font-size: clamp(1rem, 1.5vw, 1.5rem) !important; /* 40% smaller */
-    color: #8082f8 !important; /* Match the Creative Developer blue */
-    -webkit-text-stroke: 0; /* Remove white stroke */
-  }
-  
-  /* Update hover effects to match */
-  .navbar__link:hover {
-    color: #6a6ff5 !important; /* Darker blue on hover */
-    -webkit-text-stroke: 0; /* Remove stroke effect */
-  }
-  
-  /* Adjust mobile sizes */
-  @media (max-width: 1024px) {
-    .navbar__link {
-      font-size: clamp(0.9rem, 1.5vw, 1.2rem) !important;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .navbar__link {
-      font-size: clamp(0.8rem, 1.8vw, 1rem) !important;
-    }
-  }
-  /* Add these styles to your existing CSS */
-  .site-title {
-    margin-top: -30px; /* Initial position */
-    transition: all 0.3s ease; /* Smooth transition */
-    position: relative; /* Required for sticky behavior */
-  }
-  
-  /* When scrolling, move to center */
-  .site-header.scrolled .site-title {
-    margin-top: 0;
-    position: fixed;
-    top: 0;
-    transform: translateX(-50%);
-    z-index: 1001; /* Above other elements */
-  }
-  
-  .site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  padding: 1rem 2rem;
-  transition: all 0.3s ease-in-out;
-
-  /* Remove background color */
-  background-color: transparent; /* Fully transparent */
-  backdrop-filter: none; /* Optional: remove blur effect too */
-}
-  
-  /* Adjustments for smaller screens */
-  @media (max-width: 768px) {
-    .site-title {
-      font-size: 1.2rem;
-    }
-  }
-  </style>
-  
-
-<body class="opening hide-UI view-3D zoom-large data-close controls-close">
+  <!-- 3D Solar System Universe -->
   <div id="universe" class="scale-stretched">
-    <div id="galaxy">
+    <canvas id="space-fx" style="position: absolute; inset: 0; width: 100%; height: 100%; pointer-events: none; z-index: 0;"></canvas>
+    <div id="galaxy" style="z-index: 1;">
       <div id="solar-system" class="earth">
+        
+        <!-- Mercury -->
         <div id="mercury" class="orbit">
           <div class="pos">
             <div class="planet">
@@ -255,6 +50,8 @@
             </div>
           </div>
         </div>
+
+        <!-- Venus -->
         <div id="venus" class="orbit">
           <div class="pos">
             <div class="planet">
@@ -265,6 +62,8 @@
             </div>
           </div>
         </div>
+
+        <!-- Earth & Moon -->
         <div id="earth" class="orbit">
           <div class="pos">
             <div class="orbit">
@@ -280,6 +79,8 @@
             </div>
           </div>
         </div>
+
+        <!-- Mars -->
         <div id="mars" class="orbit">
           <div class="pos">
             <div class="planet">
@@ -290,6 +91,8 @@
             </div>
           </div>
         </div>
+
+        <!-- Jupiter -->
         <div id="jupiter" class="orbit">
           <div class="pos">
             <div class="planet">
@@ -300,6 +103,8 @@
             </div>
           </div>
         </div>
+
+        <!-- Saturn & Rings -->
         <div id="saturn" class="orbit">
           <div class="pos">
             <div class="planet">
@@ -311,6 +116,8 @@
             </div>
           </div>
         </div>
+
+        <!-- Uranus -->
         <div id="uranus" class="orbit">
           <div class="pos">
             <div class="planet">
@@ -321,6 +128,8 @@
             </div>
           </div>
         </div>
+
+        <!-- Neptune -->
         <div id="neptune" class="orbit">
           <div class="pos">
             <div class="planet">
@@ -331,1231 +140,691 @@
             </div>
           </div>
         </div>
-        <div id="sun" style="width: 170px;">
+
+        <!-- Sun: Elie Haddad Profile Cutout with Solar Corona Aura -->
+        <div id="sun">
           <dl class="infos">
             <dt>Sun</dt>
             <dd><span></span></dd>
           </dl>
         </div>
+
       </div>
     </div>
   </div>
-  
-<section id="education" class="experience-section" style="margin-top: 500px;">
-    <div class="section-title" >Education</div>
-    <div class="card-container">
-      <!-- Card 1 -->
-      <div class="card">
-        <div class="head">BS in Computer Science</div>
-        <div class="content">
-          Lebanese International University (LIU) | 2022 - 2025<br />
-          GPA: 3.93
+
+  <!-- Professional Summary Section -->
+  <section id="summary" class="summary-section">
+    <div class="section-header-wrap">
+      <span class="eyebrow">Professional Profile</span>
+      <h2 class="section-title" data-text="Professional Summary">Professional Summary</h2>
+    </div>
+    <div class="card-container container-max">
+      <div class="card summary-card">
+        <div class="head experience-header">
+          <div class="role-group">
+            <h3 class="role-title">Elie Haddad &mdash; Profile Overview</h3>
+            <span class="company-badge">AI &amp; Software Engineer</span>
+          </div>
+          <div class="meta-group">
+            <span class="badge-timeline"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle;display:inline-block;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Dekwaneh / Beirut, Lebanon</span>
+          </div>
         </div>
-      </div>
-  
-      <!-- Card 2 -->
-      <div class="card">
-        <div class="head">TS2 in Mechanical Engineering</div>
         <div class="content">
-          General Directory for Vocational and Technical Education | 2019 - 2021<br>Grade : 14.78 / 20
-        </div>
-      </div>
-  
-      <!-- Card 3 -->
-      <div class="card">
-        <div class="head">Lebanese Baccalaureate </div>
-        <div class="content">
-           General Science <br>
-          Sacré-Coeur Gemmayze | 2019
+          <p class="summary-subtitle">
+            Agentic AI Systems &bull; Model Context Protocol (MCP) &bull; RAG &bull; Text-to-SQL &bull; Oracle APEX &bull; High-Concurrency PL/SQL
+          </p>
+          <p class="summary-bio">
+            Software engineer who ships LLM-powered autonomous systems and production enterprise software. Built an end-to-end browser agent featured at the KANZ AI Hackathon (LAU ACE). At Logos, applies AI to real enterprise work: automated time-heavy tasks, built AI skills and a schema-aware &ldquo;second brain&rdquo; over the company database, and engineered novel Oracle APEX solutions, including a dynamic Interactive Grid not previously done in the platform. B.Sc. Computer Science, GPA 3.94/4.0.
+          </p>
+          <div class="summary-badges-wrap">
+            <span class="badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle;display:inline-block;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Dekwaneh / Beirut, Lebanon</span>
+            <span class="badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle;display:inline-block;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+961 71 089 646</span>
+            <span class="badge"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle;display:inline-block;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><a href="mailto:eliehaddadh1@gmail.com" class="badge-link">eliehaddadh1@gmail.com</a></span>
+            <span class="badge badge-highlight"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fbbf24" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle;display:inline-block;"><path d="M22 10v6M2 10l10-5 10 5-10 5z"></path><path d="M6 12v5c3 3 9 3 12 0v-5"></path></svg>B.Sc. CS (GPA 3.94 / 4.0)</span>
+            <span class="badge badge-accent"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#c084fc" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle;display:inline-block;"><circle cx="12" cy="12" r="10"></circle><line x1="2" y1="12" x2="22" y2="12"></line><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path></svg><a href="http://eliehaddad.infy.uk" target="_blank" class="badge-link">eliehaddad.infy.uk</a></span>
+          </div>
         </div>
       </div>
     </div>
-</div>
   </section>
-  
-  <style>
-    /* Section Styling */
-  .education-section {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    padding: 4rem 0;
-  }
-  
-  
-  .card-container {
-    display: flex;
-    gap: 2rem; /* Space between cards */
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap; /* Ensures cards wrap on smaller screens */
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  /* Card Styling */
-  .card {
-    font-family: Montserrat, sans-serif;
-    width: 300px;
-    height: 200px;
-    translate: -6px -6px;
-    background: transparent; /* Theme color */
-    border: 3px solid #000000;
-    box-shadow: 12px 12px 0 #000000;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-  
-  .head {
-    font-family: Montserrat, sans-serif;
-    font-size: 14px;
-    font-weight: 900;
-    width: 100%;
-    height: 45px;
-    background:transparent;
-    padding: 5px 12px;
-    color: #ffffff;
-  }
-  
-  .content {
-    padding: 8px 12px;
-    font-size: 14px;
-    font-weight: 600;
-    color: #fffdfd; /* Text color matches theme */
-    line-height: 1.4;
-  }
-  
-  .button {
-    padding: 5px 10px;
-    margin-top: 10px;
-    border: 3px solid #000000;
-    box-shadow: 3px 3px 0 #000000;
-    font-weight: 750;
-    background: #4ade80;
-    transition: all 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .button:hover {
-    translate: 1.5px 1.5px;
-    box-shadow: 1.5px 1.5px 0 #000000;
-    background: #1ac2ff; /* Hover color matches theme */
-  }
-  
-  .button:active {
-    translate: 3px 3px;
-    box-shadow: 0 0 0 #000000;
-  }
-  
-  .card:hover {
-    translate: -6px;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 1024px) {
-    .card-container {
-      gap: 1rem; /* Reduce spacing on smaller screens */
-    }
-  
-    .card {
-      width: 250px; /* Slightly smaller cards */
-      height: 180px;
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .card-container {
-      flex-direction: column; /* Stack cards vertically */
-      gap: 1.5rem;
-    }
-  
-    .card {
-      width: 100%; /* Full width on very small screens */
-      height: auto;
-    }
-  }
-  /* Add to your existing CSS */
-  .education-section {
-    margin-top: 50px; /* Reduced from 150px */
-    position: relative;
-    z-index: 1;
-  }
-  
-  
-  /* Ensure cards don't overlap title */
-  .card-container {
-    margin-top: 2rem;
-  }
-  
-  </style>
-  <style>
-  
-  /* Positioning fix */
-  .education-section {
-    position: relative;
-    margin-top: 100px; /* Adjust based on your layout */
-    padding: 4rem 0;
-    z-index: 1;
-  }
-  .education-section {
-    margin: 150px auto 0;
-    max-width: 1200px;
-    position: relative;
-    z-index: 1;
-  
-    /* Inner content alignment */
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
-  /* Add decorative elements matching the homepage header */
-  .education-section::before {
-    content: '';
-    position: absolute;
-    top: -20px;
-    left: -20px;
-    right: -20px;
-    bottom: -20px;
-    opacity: 0.3;
-    pointer-events: none;
-  }
-  /* Positioning adjustments */
-  .education-section {
-    position: relative;
-    margin-top: 100px;
-    padding: 4rem 0;
-    z-index: 1;
-  }
-  /* Unified Section Title Styling */
-  .section-title {
-    /* Core styling */
-    font-family: var(--font-family-heading);
-    font-size: clamp(2.5rem, 6vw, 3.5rem);
-    color: #ffffff; /* Matches the theme blue */
-    text-transform: uppercase;
-    letter-spacing: -0.03em;
-    line-height: 1;
-    position: relative;
-    z-index: 1;
-    margin: 4rem 0 3rem;
-    text-align: center;
-    
-    /* 3D effect */
-    text-shadow: 
-      2px 2px 0 #00000010,
-      4px 4px 0 #00000008,
-      6px 6px 0 #00000005;
-    
-    /* Smooth animation */
-    transition: transform 0.3s ease;
-  }
-  
-  /* Hover effect */
-  .section-title:hover {
-    transform: translate(-2px, -2px);
-    text-shadow: 
-      4px 4px 0 #00000015,
-      6px 6px 0 #00000010,
-      8px 8px 0 #00000008;
-  }
-  
-  /* Section container styling */
-  .education-section {
-    position: relative;
-    margin-top: 100px;
-    padding: 4rem 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  </style>
-  <style>
-    :root {
-    --background: #111111; /* Light pink (Lavender Blush) */
-    --background-alt: #FFF5F5; /* Slightly lighter variant */
-    --color-accent: #8082f8; /* Keep existing purple accent */
-  }
-  
-  
-  
-  
-  </style>
+
   <!-- Experience Section -->
-  <section class="experience-section" id="experience" >
-    <div class="section-title" data-text="Experience">Experience</div>
-    <div class="card-container">
+  <section class="experience-section" id="experience">
+    <div class="section-header-wrap">
+      <span class="eyebrow">Career Highlights</span>
+      <h2 class="section-title" data-text="Experience">Experience</h2>
+    </div>
+    <div class="card-container container-max vertical-cards">
       
-      <!-- Runner -->
-      <div class="card">
-        <div class="head">Runner</div>
+      <!-- Logos Experience -->
+      <div class="card experience-featured">
+        <div class="head experience-header">
+          <div class="role-group">
+            <h3 class="role-title">Software Developer (Oracle APEX)</h3>
+            <span class="company-badge">Logos</span>
+          </div>
+          <div class="meta-group">
+            <span class="badge-timeline">Jul 2025 &ndash; Present</span>
+            <span class="badge-location"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle;display:inline-block;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Dekwaneh, Lebanon</span>
+          </div>
+        </div>
         <div class="content">
-          <p><strong>O Beirut, Jal El Dib | 2023 - 2024</strong></p>
           <ul>
-            <li>Managed customer interactions and coordinated order fulfillment in a fast-paced environment.</li>
-            <li>Collaborated with team members to improve operational workflow and customer satisfaction.</li>
+            <li>Core developer on the three-month delivery of a large Third-Party Administrator platform: medical review, insurance policies, providers, payments, bank transfers, ticketing.</li>
+            <li>Built an API-driven ticketing platform on ORDS with OAuth 2.0 system-to-system integrations; wrote modular PL/SQL packages and triggers for high-concurrency workflows; implemented RBAC and audited payment modules.</li>
+            <li>Automated time-consuming manual workflows with AI agents and scripts, reducing repetitive operational work.</li>
+            <li>Built AI skills and a &ldquo;second brain&rdquo; encoding the Logos database (which tables to use and how), so assistants query the real schema instead of guessing.</li>
+            <li>Used Hermes, Antigravity and Claude Code to automate tasks and develop pages; used Antigravity to solve hard APEX low-code problems, including a novel solution to a problem with no known fix.</li>
+            <li>Designed a polymorphic dynamic Interactive Grid for APEX, a pattern not previously available in the platform.</li>
           </ul>
         </div>
       </div>
-  
-      <!-- Waiter -->
-      <div class="card">
-        <div class="head">Waiter</div>
+
+      <!-- ProofApply -->
+      <div class="card experience-featured">
+        <div class="head experience-header">
+          <div class="role-group">
+            <h3 class="role-title">ProofApply &mdash; Autonomous AI Application Agent</h3>
+            <span class="company-badge founder-badge">Founder / Lead Engineer</span>
+          </div>
+          <div class="meta-group">
+            <span class="badge-tech">Python &bull; Playwright / CDP &bull; LLMs (Qwen / Gemini) &bull; MCP &bull; SQLite</span>
+          </div>
+        </div>
         <div class="content">
-          <p><strong>Faqra Catering | 2022</strong></p>
           <ul>
-            <li>Executed efficient customer service and precise order management.</li>
-            <li>Maintained service quality through effective teamwork and communication.</li>
+            <li>Agent that drives a real browser across ATS platforms (Ashby, Greenhouse, Workable, SmartRecruiters, Lever), fills dynamic forms, answers screening questions with LLMs, and strictly verifies outcomes.</li>
+            <li>Tiered decision stack with confidence thresholds, circuit breakers and caching; multi-signal submission verifier (ARIA errors, network payloads, DOM diffs) feeding a retry-and-learn loop; metrics dashboard so no success is falsely reported.</li>
+          </ul>
+          <div style="margin-top: 1.1rem;">
+            <a href="https://github.com/UnderratedGignac" target="_blank" class="project-button">
+              <span>GitHub Profile</span>
+              <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Oracle APEX & DB MCP Servers & RAG -->
+      <div class="card experience-featured">
+        <div class="head experience-header">
+          <div class="role-group">
+            <h3 class="role-title">Oracle APEX / Database MCP Servers &amp; RAG</h3>
+            <span class="company-badge project-badge">Personal Project</span>
+          </div>
+          <div class="meta-group">
+            <span class="badge-tech">Oracle APEX &bull; ORDS &bull; Python &bull; MCP &bull; RAG &bull; SQL</span>
+          </div>
+        </div>
+        <div class="content">
+          <ul>
+            <li>MCP servers with 20+ tools letting AI assistants create and manage live APEX apps, pages, charts and ORDS definitions.</li>
+            <li>RAG pipelines with semantic caching and safe read-only SQL verification.</li>
           </ul>
         </div>
       </div>
-  
-      <!-- Car Maintenance Technician -->
-      <div class="card">
-        <div class="head">Car Maintenance Technician</div>
+
+      <!-- LLM Red-Teaming & Fine-Tuning Lab -->
+      <div class="card experience-featured">
+        <div class="head experience-header">
+          <div class="role-group">
+            <h3 class="role-title">LLM Red-Teaming &amp; Fine-Tuning Lab</h3>
+            <span class="company-badge project-badge">Personal Project</span>
+          </div>
+          <div class="meta-group">
+            <span class="badge-tech">Python &bull; Prompt Generators &bull; Probes &bull; Qwen3 &bull; LoRA</span>
+          </div>
+        </div>
         <div class="content">
-          <p><strong>Joseph and Robert Car Maintenance, Dekwaneh | 2021</strong></p>
           <ul>
-            <li>Diagnosed and resolved mechanical issues using technical knowledge and problem-solving skills.</li>
-            <li>Improved service efficiency through systematic troubleshooting approaches.</li>
+            <li>Automated red-team harness with prompt generators, probes, and automated scoring.</li>
+            <li>Qwen3 parameter-efficient LoRA fine-tuning pipeline.</li>
           </ul>
         </div>
       </div>
-  
+
     </div>
   </section>
-  <style>/* Experience Section Styling */
-    .experience-section {
-      margin-top: 150px;
-      position: relative;
-      padding: 4rem 0;
-    }
-    
-    /* Card Container */
-    .experience-section .card-container {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-      gap: 2rem;
-      grid-auto-rows: 1fr; /* Force equal row heights */
-    }
-    
-    /* Card Styling */
-    .experience-section .card {
-      font-family: Montserrat, sans-serif;
-      border: 3px solid #000000; /* Black border */
-      box-shadow: 12px 12px 0 #000000; /* 3D shadow effect */
-      overflow: hidden;
-      transition: all 0.3s ease;
-      height: 100%;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    .experience-section .card:hover {
-      transform: translate(-6px, -6px); /* Hover effect */
-    }
-    
-    /* Head Styling */
-    .experience-section .head {
-      font-family: Montserrat, sans-serif;
-      font-size: 14px;
-      font-weight: 900;
-      width: 100%;
-      height: 45px;
-      background: transparent; /* Soft pink background */
-      padding: 5px 12px;
-      color:#f1f1f1; /* Black text */
-      border-bottom: 3px solid #000000; /* Black bottom border */
-    }
-    
-    /* Content Styling */
-    .experience-section .content {
-      padding: 1.5rem;
-      font-size: 14px;
-      font-weight: 600;
-      color: #999999; /* Black text */
-      line-height: 1.4;
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-    }
-    
-    /* List Styling */
-    .experience-section ul {
-      margin: 0.5rem 0;
-      padding-left: 1.2rem;
-    }
-    
-    .experience-section li {
-      margin-bottom: 0.3rem;
-    }
-    
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      .experience-section .card-container {
-        grid-template-columns: 1fr;
-      }
-    
-      .experience-section .card {
-        width: 100%;
-        height: auto;
-      }
-    }</style>
+
+  <!-- Projects Section -->
+  <section class="projects-section" id="projects">
+    <div class="section-header-wrap">
+      <span class="eyebrow">Selected Engineering</span>
+      <h2 class="section-title" data-text="Key Projects">Key Projects</h2>
+    </div>
+    <div class="card-container container-max grid-two">
+      
+      <!-- Advanced Course Scheduling System -->
+      <div class="card project-card">
+        <div class="head experience-header">
+          <div class="role-group">
+            <h3 class="role-title">Advanced Course Scheduling System</h3>
+            <span class="company-badge project-badge">Optimization System</span>
+          </div>
+        </div>
+        <div class="content">
+          <p class="tech-stack-label">Python &bull; Google OR-Tools &bull; Constraint Programming</p>
+          <p class="card-desc">
+            Developed an advanced course scheduling system using Google OR-Tools, implementing constraint programming techniques for conflict-free academic scheduling.
+          </p>
+        </div>
+      </div>
+
+      <!-- RLModel - Reinforcement Learning Game -->
+      <div class="card project-card">
+        <div class="head experience-header">
+          <div class="role-group">
+            <h3 class="role-title">RLModel &mdash; Reinforcement Learning Game</h3>
+            <span class="company-badge project-badge">AI Game Engine</span>
+          </div>
+        </div>
+        <div class="content">
+          <p class="tech-stack-label">Python &bull; Reinforcement Learning &bull; Game Development</p>
+          <p class="card-desc" style="margin-bottom: 1.1rem;">
+            Designed and implemented a reinforcement learning-based game where an AI agent learns to navigate obstacles through iterative training.
+          </p>
+          <a href="https://github.com/UnderratedGignac/RLmodel_and_game" target="_blank" class="project-button">
+            <span>View Project</span>
+            <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><line x1="7" y1="17" x2="17" y2="7"></line><polyline points="7 7 17 7 17 17"></polyline></svg>
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Technical Skills Section -->
   <section class="skills-section" id="skills">
-    <div class="section-title" data-text="Technical Skills">Technical Skills</div>
-    <div class="card-container">
+    <div class="section-header-wrap">
+      <span class="eyebrow">Technical Mastery</span>
+      <h2 class="section-title" data-text="Core Technical Skills">Core Technical Skills</h2>
+    </div>
+    <div class="card-container container-max grid-four">
       
       <!-- Programming Languages -->
       <div class="card">
         <div class="head">Programming Languages</div>
-        <div class="content">
-          <button class="skill-button">Java</button>
+        <div class="content skill-btn-wrap">
           <button class="skill-button">Python</button>
+          <button class="skill-button">Java</button>
           <button class="skill-button">C#</button>
           <button class="skill-button">C++</button>
-          <button class="skill-button">Dart</button>
-        </div>
-      </div>
-  
-      <!-- Web Development -->
-      <div class="card">
-        <div class="head">Web Development</div>
-        <div class="content">
-          <button class="skill-button">HTML</button>
-          <button class="skill-button">CSS</button>
-          <button class="skill-button">JavaScript</button>
-          <button class="skill-button">PHP</button>
-          <button class="skill-button">AJAX</button>
-        </div>
-      </div>
-  
-      <!-- Database Management -->
-      <div class="card">
-        <div class="head">Database Management</div>
-        <div class="content">
-          <button class="skill-button">MySQL</button>
-          <button class="skill-button">PhpMyAdmin</button>
           <button class="skill-button">SQL</button>
+          <button class="skill-button">PL/SQL</button>
+          <button class="skill-button">Dart</button>
+          <button class="skill-button">HTML5 / CSS3</button>
+          <button class="skill-button">JavaScript</button>
         </div>
       </div>
-  
-      <!-- AI Section -->
-  <div class="card">
-    <div class="head">Artificial Intelligence (AI)</div>
-    <div class="content">
-      <button class="skill-button">Natural Language Processing (NLP)</button>
-      <button class="skill-button">Computer Vision</button>
-      <button class="skill-button">Fine Tuning Models</button>
-      <button class="skill-button">LLM</button>
-    </div>
-  </div>
-  
-  <!-- Frameworks & Tools -->
+
+      <!-- AI & Autonomous Systems -->
       <div class="card">
-        <div class="head">LLM models</div>
-        <div class="content">
-          <button class="skill-button">Generative AI</button>
-          <button class="skill-button">Prompt Engineering</button>
-          <button class="skill-button">AI Agents</button>
-          <button class="skill-button">Vibe coding practices</button>
+        <div class="head">AI &amp; Autonomous Systems</div>
+        <div class="content skill-btn-wrap">
+          <button class="skill-button">Autonomous Agents</button>
+          <button class="skill-button">Tool Use / Calling</button>
+          <button class="skill-button">Model Context Protocol (MCP)</button>
+          <button class="skill-button">RAG Pipelines</button>
+          <button class="skill-button">Playwright / CDP</button>
+          <button class="skill-button">LoRA Fine-Tuning</button>
+          <button class="skill-button">LLM Red-Teaming</button>
+          <button class="skill-button">Qwen / Gemini APIs</button>
         </div>
       </div>
-  <!-- ML Section -->
-  <div class="card">
-    <div class="head">Machine Learning (ML)</div>
-    <div class="content">
-      <button class="skill-button">Classification</button>
-      <button class="skill-button">Regression</button>
-      <button class="skill-button">Clustering</button>
-      <button class="skill-button">Reinforcement Learning</button>
-    </div>
-  </div>
-  
-  <!-- Machine Learning Frameworks & Libraries -->
-  <div class="card">
-    <div class="head">Machine Learning Libraries</div>
-    <div class="content">
-      <button class="skill-button">Scikit-learn</button>
-      <button class="skill-button">TensorFlow</button>
-      <button class="skill-button">PyTorch</button>
-      <button class="skill-button">Hugging Face Transformers</button>
-    </div>
-  </div>
-  
-  <!-- Data Science & Development Tools -->
-  <div class="card">
-    <div class="head">Data Science </div>
-    <div class="content">
-      <button class="skill-button">Pandas</button>
-      <button class="skill-button">NumPy</button>
-      <button class="skill-button">Matplotlib</button>
-      <button class="skill-button">Flask</button>
-    </div>
-  </div>
-  
-      <!-- Frameworks & Tools -->
+
+      <!-- Oracle Ecosystem & Enterprise DB -->
       <div class="card">
-        <div class="head">Frameworks & Tools</div>
-        <div class="content">
-          <button class="skill-button">Microsoft Office</button>
-          <button class="skill-button">JSON</button>
-          <button class="skill-button">Visual Studio</button>
-          <button class="skill-button">Git</button>
-          <button class="skill-button">Constraint Programming</button>
+        <div class="head">Oracle &amp; Enterprise DB</div>
+        <div class="content skill-btn-wrap">
+          <button class="skill-button">Oracle APEX 24.2</button>
+          <button class="skill-button">ORDS REST APIs</button>
+          <button class="skill-button">High-Concurrency PL/SQL</button>
+          <button class="skill-button">OAuth 2.0 Security</button>
+          <button class="skill-button">Interactive Grids</button>
+          <button class="skill-button">RBAC &amp; Audit Logs</button>
+          <button class="skill-button">SQLite</button>
         </div>
       </div>
-  
+
+      <!-- Frameworks, Web & Engineering Tools -->
+      <div class="card">
+        <div class="head">Frameworks, Web &amp; Tools</div>
+        <div class="content skill-btn-wrap">
+          <button class="skill-button">FastAPI</button>
+          <button class="skill-button">Flask</button>
+          <button class="skill-button">Next.js</button>
+          <button class="skill-button">Flutter</button>
+          <button class="skill-button">Docker</button>
+          <button class="skill-button">Git &amp; GitHub</button>
+          <button class="skill-button">Linux / Shell</button>
+          <button class="skill-button">Google OR-Tools</button>
+        </div>
+      </div>
+
     </div>
   </section>
-  
-  <style>
-    /* Skills Section Styling */
-  .skills-section {
-    margin-top: 150px;
-    position: relative;
-    padding: 4rem 0;
-  }
-  
-  /* Skill Buttons */
-  .skill-button {
-    font-family: Montserrat, sans-serif;
-    font-weight: 600;
-    background: #4ade80;
-    border: 3px solid #000000;
-    box-shadow: 3px 3px 0 #000000;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    margin: 0.5rem 0;
-    transition: all 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .skill-button:hover {
-    transform: translate(1.5px, 1.5px);
-    box-shadow: 1.5px 1.5px 0 #000000;
-    background: #1ac2ff;
-  }
-  
-  .skill-button:active {
-    transform: translate(3px, 3px);
-    box-shadow: none;
-  }
-  
-  /* Match card styling to education section */
-  .skills-section .card {
-    width: 100%;
-    max-width: 300px;
-    height: auto;
-    margin: 1rem;
-  }
-  
-  .skills-section .card .content {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  /* Responsive Layout */
-  @media (min-width: 768px) {
-    .skills-section .card-container {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-    }
-  }
-  
-  @media (min-width: 1024px) {
-    .skills-section .card-container {
-      grid-template-columns: repeat(3, 1fr);
-    }
-  }
-  /* Add these new styles */
-  .skills-section .card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    grid-auto-rows: 1fr; /* Force equal row heights */
-  }
-  
-  .skills-section .card {
-    height: 100%; /* Full height of grid cell */
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .skills-section .card .content {
-    flex: 1; /* Expand to fill available space */
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-  
-  /* Existing styles remain the same */
-  .skills-section {
-    margin-top: 150px;
-    position: relative;
-    padding: 4rem 0;
-    
-  }
-  
-  .skill-button {
-    font-family: Montserrat, sans-serif;
-    font-weight: 600;
-    background: #4ade80;
-    border: 3px solid #000000;
-    box-shadow: 3px 3px 0 #000000;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    margin: 0.5rem 0;
-    transition: all 0.3s ease;
-    cursor: pointer;
-  }
-  
-  .skill-button:hover {
-    transform: translate(1.5px, 1.5px);
-    box-shadow: 1.5px 1.5px 0 #000000;
-    background: #1ac2ff;
-  }
-  
-  .skill-button:active {
-    transform: translate(3px, 3px);
-    box-shadow: none;
-  }
-  
-  .skills-section .card {
-    width: 100%;
-    max-width: 300px;
-    margin: 1rem;
-    border: 3px solid #000000;
-    box-shadow: 12px 12px 0 #000000;
-    overflow: hidden;
-    transition: all 0.3s ease;
-  }
-  
-  .skills-section .card:hover {
-    transform: translate(-6px, -6px);
-  }
-  
-  .skills-section .head {
-    background:transparent;
-    border-bottom: 3px solid #000000;
-    padding: 1rem;
-    font-weight: 900;
-  }
-  
-  /* Responsive Layout */
-  @media (max-width: 768px) {
-    .skills-section .card-container {
-      grid-template-columns: 1fr;
-    }
-  }
-  </style>
-  <!-- Projects Section -->
-  <section class="projects-section"  id="projects">
-    <div class="section-title" data-text="Projects">Projects</div>
-    <div class="card-container">
+
+  <!-- Education Section -->
+  <section class="education-section" id="education">
+    <div class="section-header-wrap">
+      <span class="eyebrow">Academic Background</span>
+      <h2 class="section-title" data-text="Education">Education</h2>
+    </div>
+    <div class="card-container container-max grid-two">
       
-      <!-- Advanced Course Scheduling System -->
+      <!-- LIU Degree -->
       <div class="card">
-        <div class="head">Advanced Course Scheduling System</div>
+        <div class="head">B.Sc. in Computer Science</div>
         <div class="content">
-          <p>Developing an advanced course scheduling system using Google OR-Tools, implementing constraint programming techniques for conflict-free academic scheduling.</p>
-          <p><strong>Technologies:</strong> Python, Google OR-Tools, Constraint Programming</p>
-          </div>
-      </div>
-  
-      <!-- RLModel - Reinforcement Learning Game -->
-      <div class="card">
-        <div class="head">RLModel - Reinforcement Learning Game</div>
-        <div class="content">
-          <p>Designed and implemented a reinforcement learning-based game where an AI agent learns to navigate obstacles through iterative training.</p>
-          <p><strong>Technologies:</strong> Python, Reinforcement Learning, Game Development</p>
-          <a href="https://github.com/UnderratedGignac/RLmodel_and_game" target="_blank" class="project-button">View Project</a>
-        </div>
-      </div>
-  
-      <!-- Wordle Solver -->
-      <div class="card">
-        <div class="head">Wordle Solver</div>
-        <div class="content">
-          <p>Built an AI-driven Wordle solver implementing probability analysis, natural language processing, and elimination strategies.</p>
-          <p><strong>Technologies:</strong> Python, AI, NLP, Probability Analysis</p>
-          <a href="https://example.com/wordle-solver" target="_blank" class="project-button">View Project</a>
-        </div>
-      </div>
-  
-      <!-- Cinema City -->
-      <div class="card">
-        <div class="head">Cinema City</div>
-        <div class="content">
-          <p>Developed a comprehensive cinema booking system with integrated database management for ticket reservations.</p>
-          <p><strong>Technologies:</strong> C#, SQL, Form Applications</p>
-          <a href="https://github.com/UnderratedGignac/CinemaCity" target="https://github.com/UnderratedGignac/CinemaCity" class="project-button">View Project</a>
-        </div>
-      </div>
-  
-      <!-- Hot Bananas E-Commerce Platform -->
-      <div class="card">
-        <div class="head">Hot Bananas E-Commerce Platform</div>
-        <div class="content">
-          <p>Architected a full-stack e-commerce platform for clothing sales featuring user authentication, product catalog management, and secure checkout.</p>
-          <p><strong>Technologies:</strong> HTML, CSS, JavaScript, PHP, JSON, MySQL, Flutter, Dart</p>
-          <a href="https://github.com/UnderratedGignac/HotBananas" target="https://github.com/UnderratedGignac/HotBananas" class="project-button">View Project</a>
-        </div>
-      </div>
-  
-      <!-- Euphoria Music Streaming -->
-      <div class="card">
-        <div class="head">Euphoria Music Streaming</div>
-        <div class="content">
-          <p>Developed a database-driven music streaming platform with an intuitive user interface for browsing and playing music.</p>
-          <p><strong>Technologies:</strong> HTML, CSS, JavaScript, PHP, MySQL</p>
-        </div>
-      </div>
-  
-      <!-- Blackjack AI -->
-      <div class="card">
-        <div class="head">Blackjack AI</div>
-        <div class="content">
-          <p>Engineered an AI-powered Blackjack player utilizing Random Forest Classifier for optimal decision-making.</p>
-          <p><strong>Technologies:</strong> Python, Machine Learning, GUI Development</p></div>
-      </div>
-      <div class="card">
-        <div class="head">Cat Lover's Surprise</div>
-        <div class="content">
-          <p>
-            A delightful interactive web experience designed for cat lovers! This project features falling hearts, confetti explosions, and a playful Valentine's Day-themed alert. Built with HTML, CSS, and JavaScript, it showcases creative animations and responsive design.
+          <p class="edu-institution">
+            Lebanese International University (LIU)
           </p>
-          <p><strong>Technologies:</strong> HTML, CSS, JavaScript</p>
-          <a href="https://github.com/UnderratedGignac/Valentine" target="https://github.com/UnderratedGignac/Valentine" class="project-button">View Project</a>
+          <p class="edu-timeline">
+            2022 &ndash; 2025 &bull; Beirut, Lebanon
+          </p>
+          <p class="edu-gpa">
+            GPA: 3.94 / 4.0 &mdash; Graduated with Highest Distinction
+          </p>
+          <p class="card-desc">
+            Core coursework: Data Structures, Algorithms, Database Systems, Artificial Intelligence, Operating Systems, Computer Architecture, Software Engineering.
+          </p>
         </div>
       </div>
-  
+
+      <!-- Technical Diploma -->
+      <div class="card">
+        <div class="head">TS2 in Mechanical Engineering</div>
+        <div class="content">
+          <p class="edu-institution">
+            General Directory for Vocational &amp; Technical Education
+          </p>
+          <p class="edu-timeline">
+            2019 &ndash; 2021 &bull; Lebanon
+          </p>
+          <p class="edu-gpa">
+            Grade: 14.78 / 20 &mdash; High Distinction
+          </p>
+          <p class="card-desc">
+            Strong analytical foundations, precision problem-solving, mechanical systems modeling, and applied technical mathematics.
+          </p>
+        </div>
+      </div>
+
     </div>
   </section>
-  <style>
-    /* Projects Section Styling */
-  .projects-section {
-    margin-top: 150px;
-    position: relative;
-    padding: 4rem 0;
-  }
-  
-  /* Card Container */
-  .projects-section .card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    grid-auto-rows: 1fr; /* Force equal row heights */
-  }
-  
-  /* Card Styling */
-  .projects-section .card {
-    font-family: Montserrat, sans-serif;
-    background: transparent;
-    border: 3px solid #000000;
-    box-shadow: 12px 12px 0 #000000;
-    overflow: hidden;
-    transition: all 0.3s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .projects-section .card:hover {
-    transform: translate(-6px, -6px);
-  }
-  
-  /* Head Styling */
-  .projects-section .head {
-    font-family: Montserrat, sans-serif;
-    font-size: 14px;
-    font-weight: 900;
-    width: 100%;
-    height: 45px;
-    background:transparent;
-    padding: 5px 12px;
-    color: #f1f1f1;
-    border-bottom: 3px solid #000000;
-  }
-  
-  /* Content Styling */
-  .projects-section .content {
-    padding: 1.5rem;
-    font-size: 14px;
-    font-weight: 600;
-    color: #999999;
-    line-height: 1.4;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Project Button */
-  .project-button {
-    font-family: Montserrat, sans-serif;
-    font-weight: 700;
-    background: #4ade80;
-    border: 3px solid #000000;
-    box-shadow: 3px 3px 0 #000000;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    margin-top: auto; /* Push button to the bottom */
-    align-self: flex-start;
-    transition: all 0.3s ease;
-    cursor: pointer;
-    text-decoration: none;
-    color: #000000;
-  }
-  
-  .project-button:hover {
-    transform: translate(1.5px, 1.5px);
-    box-shadow: 1.5px 1.5px 0 #000000;
-    background: #1ac2ff;
-  }
-  
-  .project-button:active {
-    transform: translate(3px, 3px);
-    box-shadow: none;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .projects-section .card-container {
-      grid-template-columns: 1fr;
-    }
-  
-    .projects-section .card {
-      width: 100%;
-      height: auto;
-    }
-  }
-  </style>
-  <!-- Certifications & Education Section -->
-  <section class="certifications-section" id="certifications" >
-    <div class="section-title" data-text="Certifications & Education">Certifications</div>
-    <div class="card-container">
-  
-         <!-- Google Machine Learning Crash Course -->
+
+  <!-- Certifications Section -->
+  <section class="certifications-section" id="certifications">
+    <div class="section-header-wrap">
+      <span class="eyebrow">Credentials</span>
+      <h2 class="section-title" data-text="Certifications">Certifications</h2>
+    </div>
+    <div class="card-container container-max grid-two">
+      
+      <!-- Google ML Crash Course -->
       <div class="card">
         <div class="head">Google Machine Learning Crash Course</div>
         <div class="content">
-          <p>Completed comprehensive training in ML fundamentals, TensorFlow implementation, and neural network design.</p>
+          <p class="card-desc">
+            Completed comprehensive training in ML fundamentals, TensorFlow implementation, gradient descent optimization, and deep neural network architectures.
+          </p>
         </div>
       </div>
       
+      <!-- 5-Day Gen AI Intensive -->
       <div class="card">
-        <div class="head">5-Day Gen AI Intensive Course by Google and Kaggle</div>
+        <div class="head">5-Day Gen AI Intensive Course &mdash; Google &amp; Kaggle</div>
         <div class="content">
-          <p>covering foundational models, prompt engineering, embeddings, generative AI agents, and MLOps for generative AI . April 5 , 2025 </p>
+          <p class="card-desc">
+            Practical mastery of foundational LLMs, vector embeddings, semantic search, agentic orchestration, prompt engineering, and fine-tuning workflows.
+          </p>
         </div>
       </div>
-  
-      <!-- PCEP Advanced Registration -->
-      <div class="card">
-        <div class="head">PCEP Advanced Registration</div>
-        <div class="content">
-          <p>Enrolled in advanced Python programming with a focus on OOP and advanced concepts.</p>
-        </div>
-      </div>
-  
-      <!-- PCEP - Entry-Level Python Programmer Certificate -->
-      <div class="card">
-        <div class="head">PCEP - Entry-Level Python Programmer</div>
-        <div class="content">
-          <p>Awarded by USEK, Kaslik, Lebanon, July 24, 2024.</p>
-        </div>
-      </div>
-  
-     
-  
-        <div class="card">
-        <div class="head">CCNA: Switching, Routing, and Wireless Essentials</div>
-        <div class="content">
-          <p>Awarded on Jul 18, 2024.</p>
-        </div>
-      </div>
-  
-      <div class="card">
-        <div class="head">CCNA: Introduction to Networks</div>
-        <div class="content">
-          <p>Awarded on Feb 27, 2024.</p>
-        </div>
-      </div>
-  
-      <!-- Beirut AI Workshop: Sentiment Analysis -->
-      <div class="card">
-        <div class="head">Beirut AI Workshop: Sentiment Analysis</div>
-        <div class="content">
-          <p>Using Hugging Transformer, Beirut Digital District, March 6, 2020.</p>
-        </div>
-      </div>
-  
-      <!-- Beirut AI Workshop: NLP with AWS Tools -->
-      <div class="card">
-        <div class="head">Beirut AI Workshop: Natural Language Processing</div>
-        <div class="content">
-          <p>With AWS Tools, Beirut Digital District, March 8, 2020.</p>
-        </div>
-      </div>
-  
-      <!-- Hult Prize Certificate -->
-      <div class="card">
-        <div class="head">Hult Prize Certificate</div>
-        <div class="content">
-          <p>Awarded on April 5, 2020.</p>
-        </div>
-      </div>
-  
+
     </div>
   </section>
-  <style>
-    /* Certifications Section Styling */
-  .certifications-section {
-    margin-top: 150px;
-    position: relative;
-    padding: 4rem 0;
-  }
-  
-  /* Card Container */
-  .certifications-section .card-container {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    grid-auto-rows: 1fr; /* Force equal row heights */
-  }
-  
-  /* Card Styling */
-  .certifications-section .card {
-    font-family: Montserrat, sans-serif;
-    border: 3px solid #000000; /* Black border */
-    box-shadow: 12px 12px 0 #000000; /* 3D shadow effect */
-    overflow: hidden;
-    transition: all 0.3s ease;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  .certifications-section .card:hover {
-    transform: translate(-6px, -6px); /* Hover effect */
-  }
-  
-  /* Head Styling */
-  .certifications-section .head {
-    font-family: Montserrat, sans-serif;
-    font-size: 14px;
-    font-weight: 900;
-    width: 100%;
-    height: 45px;
-    background: transparent; /* Soft pink background */
-    padding: 5px 12px;
-    color: #f1f1f1; /* Black text */
-    border-bottom: 3px solid #000000; /* Black bottom border */
-  }
-  
-  /* Content Styling */
-  .certifications-section .content {
-    padding: 1.5rem;
-    font-size: 14px;
-    font-weight: 600;
-    color: #999999; /* Black text */
-    line-height: 1.4;
-    flex: 1;
-    display: flex;
-    flex-direction: column;
-  }
-  
-  /* Responsive Adjustments */
-  @media (max-width: 768px) {
-    .certifications-section .card-container {
-      grid-template-columns: 1fr;
-    }
-  
-    .certifications-section .card {
-      width: 100%;
-      height: auto;
-    }
-  }
-  </style>
-  
+
   <!-- Footer Section -->
   <footer class="footer" id="contact">
     <div class="footer-content">
+      
+      <div class="footer-info">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#818cf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle;display:inline-block;"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>Dekwaneh / Beirut, Lebanon &nbsp;&bull;&nbsp; <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#34d399" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle;display:inline-block;"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>+961 71 089 646 &nbsp;&bull;&nbsp; <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="margin-right:6px;vertical-align:middle;display:inline-block;"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg><a href="mailto:eliehaddadh1@gmail.com" class="footer-link">eliehaddadh1@gmail.com</a>
+      </div>
+
       <!-- Social Links -->
       <div class="social-links">
-        <a href="https://www.linkedin.com/in/elie-haddad-b98272300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="Elie Haddad's LinkedIn" class="social-link">
+        <a href="https://www.linkedin.com/in/elie-haddad-b98272300?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" target="_blank" rel="noopener noreferrer" class="social-link" title="LinkedIn">
           <img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" alt="LinkedIn" class="social-icon">
         </a>
-        <a href="https://github.com/UnderratedGignac" target="UnderratedGignac Github" class="social-link">
+        <a href="https://github.com/UnderratedGignac" target="_blank" rel="noopener noreferrer" class="social-link" title="GitHub">
           <img src="https://cdn-icons-png.flaticon.com/512/25/25231.png" alt="GitHub" class="social-icon">
         </a>
-        <a href="https://www.instagram.com/_eliehaddad4_" target="Elie Haddad Instagram" class="social-link">
+        <a href="https://www.instagram.com/_eliehaddad4_" target="_blank" rel="noopener noreferrer" class="social-link" title="Instagram">
           <img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" alt="Instagram" class="social-icon">
         </a>
-        <a href="mailto:eliehaddadh1@gmail.com" class="social-link email-link">
-          <img src="https://cdn-icons-png.flaticon.com/512/561/561127.png" alt="Email" class="social-icon">
-        </a>
       </div>
-  
-      <!-- Copyright Text -->
+
       <div class="copyright">
-        © 2025 All rights reserved by Elie Haddad
+        &copy; 2025 Elie Haddad. Crafted with Autonomous AI Engineering &amp; High-End Spatial Motion.
       </div>
     </div>
   </footer>
-  <style>/* Footer Styling */
-    .footer {
-      background : transparent; /* Matches your theme's blue */
-      color: #ffffff;
-      padding: 2rem 1rem;
-      text-align: center;
-      position: relative;
-      z-index: 1000;
+
+  <!-- Smooth Scroll, Three.js 3D Space Engine & 3D Card Micro-Interactions -->
+  <script src="https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.min.js"></script>
+  <script>
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+      anchor.addEventListener("click", function(e) {
+        e.preventDefault();
+        const targetId = this.getAttribute("href");
+        if (targetId === "#") return;
+        const targetElement = document.querySelector(targetId);
+        if (targetElement) {
+          const navbarHeight = document.querySelector(".site-header")?.offsetHeight || 0;
+          const elementPosition = targetElement.getBoundingClientRect().top + window.scrollY;
+          const offsetPosition = elementPosition - navbarHeight - 20;
+          window.scrollTo({
+            top: offsetPosition,
+            behavior: "smooth"
+          });
+          history.pushState(null, "", targetId);
+        }
+      });
+    });
+
+    // Subtle 3D Perspective Tilt on Cards (Desktop)
+    if (window.matchMedia('(hover: hover) and (pointer: fine)').matches) {
+      document.querySelectorAll('.card').forEach(card => {
+        card.addEventListener('mousemove', (e) => {
+          const rect = card.getBoundingClientRect();
+          const x = (e.clientX - rect.left) / rect.width - 0.5;
+          const y = (e.clientY - rect.top) / rect.height - 0.5;
+          card.style.transform = `perspective(1200px) rotateX(${(-y * 2.4).toFixed(2)}deg) rotateY(${(x * 2.4).toFixed(2)}deg) translateY(-4px)`;
+        });
+        card.addEventListener('mouseleave', () => {
+          card.style.transform = '';
+        });
+      });
     }
-    
-    .footer-content {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 1.5rem;
-    }
-    
-    /* Social Links */
-    .social-links {
-      display: flex;
-      gap: 1.5rem;
-      justify-content: center;
-      align-items: center;
-    }
-    
-    .social-link {
-      text-decoration: none;
-      color: #ffffff;
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      font-family: Montserrat, sans-serif;
-      font-weight: 600;
-      transition: all 0.3s ease;
-    }
-    
-    .social-link:hover {
-      transform: translateY(-2px);
-      color: #1ac2ff; /* Matches hover effects in your design */
-    }
-    
-    .social-icon {
-      width: 24px;
-      height: 24px;
-      filter: brightness(0) invert(1); /* Makes icons white */
-    }
-    
-    .cv-button {
-      background: transparent; /* No background for the PDF icon */
-      border: none;
-      padding: 0; /* Remove padding */
-      box-shadow: none; /* Remove shadow */
-      cursor: pointer;
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    
-    .cv-button:hover {
-      transform: scale(1.2); /* Slightly enlarge the icon on hover */
-    }
-    
-    .cv-button:active {
-      transform: scale(1.1); /* Slight shrink on click */
-    }
-    
-    /* Copyright Text */
-    .copyright {
-      font-family: Montserrat, sans-serif;
-      font-size: 14px;
-      font-weight: 600;
-      letter-spacing: 0.05em;
-      opacity: 0.8;
-    }
-    
-    /* Responsive Adjustments */
-    @media (max-width: 768px) {
-      .social-links {
-        flex-direction: column;
-        gap: 1rem;
+
+    // Real-Time WebGL 3D Space Engine (Three.js): Milky Way Galactic Band, Cohesive 3D Asteroid Belt, Sweeping Comet & Meteors
+    (function() {
+      const canvas = document.getElementById('space-fx');
+      if (!canvas) return;
+
+      if (typeof THREE !== 'undefined') {
+        const renderer = new THREE.WebGLRenderer({ canvas, alpha: true, antialias: true, powerPreference: 'high-performance' });
+        renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
+        renderer.setSize(window.innerWidth, window.innerHeight);
+
+        const scene = new THREE.Scene();
+        const camera = new THREE.PerspectiveCamera(55, window.innerWidth / window.innerHeight, 0.1, 1000);
+        camera.position.set(0, 0, 120);
+
+        // Solar Lighting from Center
+        const sunLight = new THREE.PointLight(0xfff4e0, 2.8, 350, 1.2);
+        sunLight.position.set(0, 0, 15);
+        scene.add(sunLight);
+
+        const ambientLight = new THREE.AmbientLight(0x1e293b, 0.7);
+        scene.add(ambientLight);
+
+        // 1. Milky Way Galactic Band + Deep Space Starfield (2,600 stars)
+        const starCount = 2600;
+        const starGeo = new THREE.BufferGeometry();
+        const starPos = new Float32Array(starCount * 3);
+        const starCol = new Float32Array(starCount * 3);
+        const palette = [
+          new THREE.Color(0xffffff),
+          new THREE.Color(0xdbeafe),
+          new THREE.Color(0xfef3c7),
+          new THREE.Color(0xe2e8f0)
+        ];
+        for (let i = 0; i < starCount; i++) {
+          const inGalacticBand = i < 1600;
+          let x, y, z;
+          if (inGalacticBand) {
+            // Sweeping tilted Milky Way band across deep space
+            const t = (Math.random() - 0.5) * 620;
+            const bandSpread = (Math.random() - 0.5) * 85 * (0.4 + Math.random() * 0.8);
+            x = t;
+            y = t * 0.36 + bandSpread;
+            z = -280 + Math.random() * 140;
+          } else {
+            x = (Math.random() - 0.5) * 650;
+            y = (Math.random() - 0.5) * 650;
+            z = -340 + Math.random() * 400;
+          }
+          starPos[i * 3] = x;
+          starPos[i * 3 + 1] = y;
+          starPos[i * 3 + 2] = z;
+
+          const c = palette[Math.floor(Math.random() * palette.length)];
+          const dim = inGalacticBand ? (0.5 + Math.random() * 0.5) : (0.6 + Math.random() * 0.4);
+          starCol[i * 3] = c.r * dim;
+          starCol[i * 3 + 1] = c.g * dim;
+          starCol[i * 3 + 2] = c.b * dim;
+        }
+        starGeo.setAttribute('position', new THREE.BufferAttribute(starPos, 3));
+        starGeo.setAttribute('color', new THREE.BufferAttribute(starCol, 3));
+        const starMat = new THREE.PointsMaterial({
+          size: 1.05,
+          vertexColors: true,
+          transparent: true,
+          opacity: 0.85,
+          sizeAttenuation: true
+        });
+        const starField = new THREE.Points(starGeo, starMat);
+        scene.add(starField);
+
+        // 2. Cohesive 3D Asteroid Belt (orbiting in the ecliptic plane around the Sun)
+        const beltGroup = new THREE.Group();
+        beltGroup.rotation.x = THREE.MathUtils.degToRad(74); // Match solar system 3D tilt
+        scene.add(beltGroup);
+
+        const beltCount = 340;
+        const beltRockGeo = new THREE.DodecahedronGeometry(0.42, 0);
+        const beltRockMat = new THREE.MeshStandardMaterial({
+          color: 0x78716c,
+          roughness: 0.92,
+          metalness: 0.08,
+          flatShading: true
+        });
+        const beltInstanced = new THREE.InstancedMesh(beltRockGeo, beltRockMat, beltCount);
+        const dummy = new THREE.Object3D();
+        const beltData = [];
+
+        for (let i = 0; i < beltCount; i++) {
+          const angle = Math.random() * Math.PI * 2;
+          const radius = 50 + Math.random() * 18; // Cohesive belt ring
+          const yOffset = (Math.random() - 0.5) * 3.5;
+          const scale = 0.45 + Math.random() * 1.15;
+          beltData.push({
+            angle,
+            radius,
+            yOffset,
+            scale,
+            speed: 0.00055 + (1 / radius) * 0.018,
+            rx: Math.random() * Math.PI,
+            ry: Math.random() * Math.PI,
+            vr: (Math.random() - 0.5) * 0.01
+          });
+        }
+        beltGroup.add(beltInstanced);
+
+        // 3. Sweeping Comet with Soft Particle Coma & Misty Dust Trail (No hard triangle/cone geometry)
+        function createSoftParticleTex() {
+          const c = document.createElement('canvas');
+          c.width = 32;
+          c.height = 32;
+          const g = c.getContext('2d');
+          const rad = g.createRadialGradient(16, 16, 0, 16, 16, 16);
+          rad.addColorStop(0, 'rgba(255, 255, 255, 1)');
+          rad.addColorStop(0.25, 'rgba(186, 230, 253, 0.55)');
+          rad.addColorStop(1, 'rgba(186, 230, 253, 0)');
+          g.fillStyle = rad;
+          g.fillRect(0, 0, 32, 32);
+          return new THREE.CanvasTexture(c);
+        }
+        const softTex = createSoftParticleTex();
+
+        const cometHeadMat = new THREE.SpriteMaterial({
+          map: softTex,
+          color: 0xe0f2fe,
+          transparent: true,
+          opacity: 0.85,
+          blending: THREE.AdditiveBlending,
+          depthWrite: false
+        });
+        const cometHead = new THREE.Sprite(cometHeadMat);
+        cometHead.scale.set(2.4, 2.4, 1);
+        scene.add(cometHead);
+
+        const tailCount = 55;
+        const tailGeo = new THREE.BufferGeometry();
+        const tailPos = new Float32Array(tailCount * 3);
+        const tailCol = new Float32Array(tailCount * 3);
+        for (let i = 0; i < tailCount; i++) {
+          const frac = i / tailCount;
+          const col = new THREE.Color(0x93c5fd).lerp(new THREE.Color(0x1e3a8a), frac);
+          const fade = Math.pow(1 - frac, 1.8) * 0.65;
+          tailCol[i * 3] = col.r * fade;
+          tailCol[i * 3 + 1] = col.g * fade;
+          tailCol[i * 3 + 2] = col.b * fade;
+        }
+        tailGeo.setAttribute('position', new THREE.BufferAttribute(tailPos, 3));
+        tailGeo.setAttribute('color', new THREE.BufferAttribute(tailCol, 3));
+        const tailMat = new THREE.PointsMaterial({
+          size: 1.4,
+          map: softTex,
+          vertexColors: true,
+          transparent: true,
+          blending: THREE.AdditiveBlending,
+          depthWrite: false,
+          sizeAttenuation: true
+        });
+        const cometTail = new THREE.Points(tailGeo, tailMat);
+        scene.add(cometTail);
+
+        let cometAngle = 0.4;
+
+        // 4. Fast Realistic Shooting Stars / Meteors
+        const meteors = [];
+        function spawnMeteor() {
+          const z = -120 + Math.random() * 120;
+          const startX = -50 + Math.random() * 200;
+          const startY = 45 + Math.random() * 85;
+          const dir = new THREE.Vector3(-0.78 - Math.random() * 0.3, -0.52 - Math.random() * 0.25, (Math.random() - 0.5) * 0.2).normalize();
+          const len = 18 + Math.random() * 20;
+
+          const geom = new THREE.BufferGeometry().setFromPoints([
+            new THREE.Vector3(0, 0, 0),
+            dir.clone().multiplyScalar(-len)
+          ]);
+          const mat = new THREE.LineBasicMaterial({ color: 0xe0f2fe, transparent: true, opacity: 0.9 });
+          const line = new THREE.Line(geom, mat);
+          line.position.set(startX, startY, z);
+          line.userData = {
+            vel: dir.multiplyScalar(2.6 + Math.random() * 1.6),
+            life: 0,
+            maxLife: 28 + Math.random() * 20
+          };
+          scene.add(line);
+          meteors.push(line);
+        }
+        setTimeout(spawnMeteor, 600);
+        setTimeout(spawnMeteor, 2200);
+
+        // Mouse & Scroll 3D Camera Parallax
+        let targetMouseX = 0, targetMouseY = 0;
+        window.addEventListener('mousemove', (e) => {
+          targetMouseX = (e.clientX / window.innerWidth - 0.5) * 12;
+          targetMouseY = -(e.clientY / window.innerHeight - 0.5) * 8;
+        });
+
+        window.addEventListener('resize', () => {
+          camera.aspect = window.innerWidth / window.innerHeight;
+          camera.updateProjectionMatrix();
+          renderer.setSize(window.innerWidth, window.innerHeight);
+        });
+
+        function animate() {
+          requestAnimationFrame(animate);
+
+          const scrollOffset = Math.min(window.scrollY / 2500, 1);
+          camera.position.x += (targetMouseX - camera.position.x) * 0.04;
+          camera.position.y += (targetMouseY - scrollOffset * 16 - camera.position.y) * 0.04;
+          camera.position.z += ((120 - scrollOffset * 22) - camera.position.z) * 0.04;
+          camera.lookAt(0, -scrollOffset * 8, 0);
+
+          // Slow celestial rotation of Milky Way starfield
+          starField.rotation.y += 0.00018;
+
+          // Update Cohesive 3D Asteroid Belt
+          for (let i = 0; i < beltCount; i++) {
+            const b = beltData[i];
+            b.angle += b.speed;
+            b.rx += b.vr;
+            b.ry += b.vr;
+            dummy.position.set(
+              Math.cos(b.angle) * b.radius,
+              b.yOffset,
+              Math.sin(b.angle) * b.radius
+            );
+            dummy.rotation.set(b.rx, b.ry, 0);
+            dummy.scale.setScalar(b.scale);
+            dummy.updateMatrix();
+            beltInstanced.setMatrixAt(i, dummy.matrix);
+          }
+          beltInstanced.instanceMatrix.needsUpdate = true;
+
+          // Update Sweeping Comet & Soft Dust Trail (particles drift away from Sun)
+          cometAngle += 0.002;
+          const cx = Math.cos(cometAngle) * 76;
+          const cy = Math.sin(cometAngle) * 24 + Math.cos(cometAngle) * 10;
+          const cz = Math.sin(cometAngle) * 58 - 10;
+          cometHead.position.set(cx, cy, cz);
+
+          const away = new THREE.Vector3(cx, cy, cz).normalize();
+          const tArr = tailGeo.attributes.position.array;
+          for (let i = 0; i < tailCount; i++) {
+            const frac = i / tailCount;
+            const dist = frac * 14;
+            const jitter = frac * 0.9;
+            tArr[i * 3] = cx + away.x * dist + Math.sin(i * 7.3 + cometAngle * 8) * jitter;
+            tArr[i * 3 + 1] = cy + away.y * dist + Math.cos(i * 5.1 + cometAngle * 6) * jitter;
+            tArr[i * 3 + 2] = cz + away.z * dist + Math.sin(i * 3.7) * jitter;
+          }
+          tailGeo.attributes.position.needsUpdate = true;
+
+          // Spawn & update 3D meteors
+          if (Math.random() < 0.012 && meteors.length < 2) {
+            spawnMeteor();
+          }
+          for (let i = meteors.length - 1; i >= 0; i--) {
+            const m = meteors[i];
+            m.position.add(m.userData.vel);
+            m.userData.life++;
+            const p = m.userData.life / m.userData.maxLife;
+            m.material.opacity = p < 0.2 ? p / 0.2 : Math.max(0, 1 - (p - 0.2) / 0.8);
+            if (m.userData.life >= m.userData.maxLife) {
+              scene.remove(m);
+              m.geometry.dispose();
+              m.material.dispose();
+              meteors.splice(i, 1);
+            }
+          }
+
+          renderer.render(scene, camera);
+        }
+        animate();
       }
-    }</style>
-    <STYle>
-  /* Custom Scrollbar Styling */
-  ::-webkit-scrollbar {
-    width: 12px; /* Width of the scrollbar */
-  }
-  
-  /* Track (background of the scrollbar) */
-  ::-webkit-scrollbar-track {
-    background: transparent; /* Make the track invisible */
-  }
-  
-  /* Thumb (the draggable part of the scrollbar) */
-  ::-webkit-scrollbar-thumb {
-    background: rgb(255, 255, 255); /* Light pink color for the thumb (less dark) */
-    border-radius: 20px; /* Rounded edges for the thumb */
-    border: 2px solid black; /* Black border around the thumb */
-    box-shadow: inset 0 0 0 1px black; /* Adding an inset box shadow to enhance visibility */
-    transition: background 0.3s ease; /* Smooth transition for hover effect */
-  }
-  
-  /* Hover Effect for the Thumb */
-  ::-webkit-scrollbar-thumb:hover {
-    background: rgb(255, 255, 255); /* Slightly darker pink on hover */
-  }
-  
-  /* For Firefox (limited customization) */
-  * {
-    scrollbar-color: rgb(255, 255, 255) transparent; /* Thumb color | Track color */
-    scrollbar-width: thin; /* Options: auto, thin, none */
-  }
-  .homepage-header__title--bottom {
-    margin-top: 0.3em !important; /* Creates a small gap */
-  }
-  
-  /* Hide navbar on screens smaller than 768px (mobile) */
-  /* Add this at the end of your existing CSS */
-  @media (max-width: 1024px) {
-    .nav-links {
-      display: none !important;
-    }
-  }
-  /* Add to your existing CSS */
-  @media (max-width: 1024px) {
-    .nav-links { /* Use the correct class name */
-      display: none !important; /* Force override */
-    }
-    .site-title {
-      position: static !important; /* Reset positioning */
-      transform: none !important;
-      margin: 1rem 0 !important;
-    }
-  }
-  /* Add to your existing CSS */
-  .footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1.5rem;
-  }
-  
-  .social-links {
-    display: flex;
-    flex-wrap: wrap; /* Allow wrapping on small screens */
-    justify-content: center;
-    gap: 1rem; /* Consistent spacing */
-    width: 100%;
-  }
-  
-  .social-link {
-    flex: 0 0 auto; /* Prevent stretching */
-    padding: 0.5rem 0.8rem; /* Smaller touch targets */
-  }
-  
-  .social-icon {
-    width: 20px; /* Smaller icons */
-    height: 20px;
-  }
-  
-  /* Mobile-specific adjustments */
-  @media (max-width: 768px) {
-    .footer {
-      padding: 1.5rem 1rem; /* Reduced padding */
-    }
-    
-    .social-link {
-      font-size: 0.8rem; /* Smaller text */
-    }
-  }
-  /* Add to your existing CSS */
-  .social-links {
-    display: flex;
-    flex-direction: row !important; /* Force horizontal layout */
-    flex-wrap: nowrap; /* Prevent wrapping */
-    justify-content: center;
-    gap: 1rem; /* Consistent spacing */
-    width: 100%;
-    overflow-x: auto; /* Horizontal scroll if needed */
-    -webkit-overflow-scrolling: touch; /* Smooth scrolling on iOS */
-  }
-  
-  .social-link {
-    flex: 0 0 auto; /* Prevent stretching */
-    padding: 0.5rem 0.8rem; /* Smaller touch targets */
-    white-space: nowrap; /* Prevent text wrapping */
-  }
-  
-  .social-icon {
-    width: 24px; /* Fixed size */
-    height: 24px;
-    object-fit: contain;
-  }
-  
-  /* Remove mobile stacking */
-  @media (max-width: 768px) {
-    .social-links {
-      flex-direction: row !important;
-      gap: 0.75rem;
-    }
-    
-    .social-link {
-      font-size: 0.8rem;
-    }
-  }
-  /* Target all card containers */
-  .card-container {
-    max-width: 1200px; /* Constrain maximum width */
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-  
-  /* Make cards responsive */
-  .card {
-    width: 100%; /* Full width of grid cell */
-    max-width: 300px; /* Maximum card width */
-    height: 100%; /* Full height of container */
-    min-height: 200px; /* Minimum height for small content */
-    transition: all 0.3s ease;
-  }
-  
-  /* Grid adjustments */
-  @media (min-width: 768px) {
-    .card-container {
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    }
-  }
-  
-  /* Full height sections */
-  .education-section,
-  .experience-section,
-  .skills-section,
-  .projects-section,
-  .certifications-section {
-    min-height: 100vh; /* Full viewport height */
-    padding: 4rem 0;
-  }
-  
-  /* Mobile optimizations */
-  @media (max-width: 768px) {
-    .card {
-      max-width: 100%;
-      min-height: auto;
-    }
-    
-    .section-title {
-      margin: 2rem 0 1.5rem;
-    }
-  }
-    </STYle>
-  </body>
-</html>
+    })();
+  </script>
+
+  <!-- 3D SOLAR SYSTEM ENGINE CSS -->
   <style>
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
   border: 0;
@@ -1640,7 +909,7 @@ body {
   animation-iteration-count: infinite;
   animation-timing-function: linear; }
 
-#sun, .planet, #earth .moon {
+.planet, #earth .moon {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -2748,7 +2017,7 @@ body {
   z-index: -1;
 }
 #sun {
-  background-image: url(me-Photoroom.png); }
+  background-image: url(profile-transparent.png); }
 
 #mercury .planet {
   background-image: url(planet.png); }
@@ -2832,5 +2101,707 @@ body {
   .zoom-close .scale-d #solar-system {
     margin-left: -120%; } }
   </style>
- 
+
+  <!-- HIGH-END MODERN DESIGN SYSTEM, ENHANCED PLANETS & CHOREOGRAPHY -->
+  <style>
+    /* ==========================================================================
+       AWWWARDS-TIER COSMIC DESIGN SYSTEM & PLANETARY CHOREOGRAPHY
+       Designed for Elie Haddad — AI & Software Engineer Portfolio
+       ========================================================================== */
+
+    :root {
+      --font-sans: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      --font-display: 'Space Grotesk', var(--font-sans);
+      
+      /* Cosmic Palette Tokens */
+      --cosmic-bg: #030612;
+      --cosmic-card-bg: rgba(11, 17, 36, 0.72);
+      --cosmic-card-hover: rgba(16, 24, 52, 0.85);
+      --cosmic-border: rgba(255, 255, 255, 0.08);
+      --cosmic-border-glow: rgba(129, 140, 248, 0.35);
+      
+      /* Neon & Starlight Accents */
+      --accent-indigo: #818cf8;
+      --accent-cyan: #38bdf8;
+      --accent-emerald: #34d399;
+      --accent-amber: #fbbf24;
+      --accent-violet: #a855f7;
+      
+      /* Text Hierarchy */
+      --text-primary: #f8fafc;
+      --text-secondary: #94a3b8;
+      --text-tertiary: #64748b;
+      
+      /* Easing */
+      --ease-spring: cubic-bezier(0.16, 1, 0.3, 1);
+    }
+
+    /* Reset & Smooth Scroll */
+    *, *::before, *::after {
+      box-sizing: border-box;
+    }
+    html {
+      scroll-behavior: smooth;
+      color-scheme: dark;
+    }
+    body {
+      font-family: var(--font-sans) !important;
+      background-color: var(--cosmic-bg) !important;
+      color: var(--text-primary) !important;
+      overflow-x: hidden !important;
+      margin: 0;
+      padding: 0;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
+    }
+
+    /* ==========================================================================
+       UNIVERSE & DEEP SPACE BACKGROUND (Realistic Starfield + Subtle Vignette)
+       ========================================================================== */
+    #universe {
+      position: fixed !important;
+      top: 0 !important;
+      left: 0 !important;
+      width: 100vw !important;
+      height: 100vh !important;
+      z-index: -2 !important;
+      background-image: url('universe.png') !important;
+      background-size: cover !important;
+      background-repeat: no-repeat !important;
+      background-position: center !important;
+      overflow: hidden !important;
+    }
+
+    /* Subtle dark cosmic vignette over universe.png for card contrast without hiding stars */
+    #universe::after {
+      content: '' !important;
+      position: absolute !important;
+      inset: 0 !important;
+      background: radial-gradient(circle at 50% 40%, rgba(5, 8, 22, 0.25) 0%, rgba(3, 6, 18, 0.65) 100%) !important;
+      pointer-events: none !important;
+      z-index: -1 !important;
+    }
+
+    /* ==========================================================================
+       PLANETARY ORBIT CHOREOGRAPHY & HARMONIOUS SPEEDS
+       ========================================================================== */
+    .orbit {
+      border: 1px solid rgba(255, 255, 255, 0.16);
+      transition: border-color 0.4s ease;
+    }
+
+    /* Harmonious Balanced Orbital Speeds (Synced with planet shadow animations) */
+    #mercury.orbit, #mercury .pos, #mercury .planet {
+      animation-duration: 4.8s !important;
+    }
+    #venus.orbit, #venus .pos, #venus .planet {
+      animation-duration: 8.2s !important;
+    }
+    #earth.orbit, #earth .pos, #earth .planet {
+      animation-duration: 13.0s !important;
+    }
+    #mars.orbit, #mars .pos, #mars .planet {
+      animation-duration: 18.5s !important;
+    }
+    #jupiter.orbit, #jupiter .pos, #jupiter .planet {
+      animation-duration: 26.0s !important;
+    }
+    #saturn.orbit, #saturn .pos, #saturn .planet, #saturn .ring {
+      animation-duration: 36.0s !important;
+    }
+    #uranus.orbit, #uranus .pos, #uranus .planet {
+      animation-duration: 48.0s !important;
+    }
+    #neptune.orbit, #neptune .pos, #neptune .planet {
+      animation-duration: 62.0s !important;
+    }
+
+    /* ==========================================================================
+       SUN PROFILE FLOAT ANIMATION (No top !important, No cheap glow)
+       ========================================================================== */
+    #sun {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      width: 1.3em;
+      height: 1.8em;
+      margin-top: -0.9em;
+      margin-left: -0.65em;
+      border-radius: 0 !important;
+      background-repeat: no-repeat;
+      background-size: contain;
+      background-position: center;
+      overflow: visible;
+      transform-style: preserve-3d;
+      animation: float 3s ease-in-out infinite;
+    }
+
+    /* ==========================================================================
+       FLOATING ISLAND NAVIGATION BAR (Detached Glass Pill)
+       ========================================================================== */
+    .site-header {
+      position: sticky !important;
+      top: 1.25rem !important;
+      margin: 0 auto !important;
+      max-width: 1100px !important;
+      width: calc(100% - 2.5rem) !important;
+      border-radius: 9999px !important;
+      background: rgba(9, 14, 30, 0.75) !important;
+      backdrop-filter: blur(20px) !important;
+      -webkit-backdrop-filter: blur(20px) !important;
+      border: 1px solid var(--cosmic-border) !important;
+      box-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.05), inset 0 1px 0 rgba(255, 255, 255, 0.15) !important;
+      z-index: 1000 !important;
+      padding: 0.65rem 1.6rem !important;
+      transition: all 0.3s var(--ease-spring) !important;
+    }
+    .site-header:hover {
+      border-color: rgba(129, 140, 248, 0.25) !important;
+      box-shadow: 0 16px 50px -10px rgba(0, 0, 0, 0.8), 0 0 25px rgba(99, 102, 241, 0.15), inset 0 1px 0 rgba(255, 255, 255, 0.2) !important;
+    }
+    .header-container {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      width: 100% !important;
+    }
+    .header-container a.email-link {
+      font-family: var(--font-display) !important;
+      font-size: 19px !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      text-decoration: none !important;
+      letter-spacing: -0.02em !important;
+      background: linear-gradient(135deg, #ffffff 40%, #c7d2fe 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+    }
+    .nav-subtitle {
+      color: var(--accent-cyan) !important;
+      font-size: 10px !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.08em !important;
+      margin-top: 1px !important;
+    }
+    .nav-links {
+      display: flex !important;
+      gap: 0.4rem !important;
+      list-style: none !important;
+      margin: 0 !important;
+      padding: 0 !important;
+    }
+    .nav-links a {
+      color: var(--text-secondary) !important;
+      text-decoration: none !important;
+      font-size: 13px !important;
+      font-weight: 600 !important;
+      padding: 0.4rem 0.85rem !important;
+      border-radius: 9999px !important;
+      transition: all 0.2s var(--ease-spring) !important;
+      position: relative !important;
+    }
+    .nav-links a:hover {
+      color: #ffffff !important;
+      background: rgba(255, 255, 255, 0.08) !important;
+      box-shadow: 0 0 12px rgba(129, 140, 248, 0.2) !important;
+    }
+
+    /* ==========================================================================
+       CARD ARCHITECTURE (Double-Bezel Machined Cosmic Glass)
+       ========================================================================== */
+    .summary-section,
+    .experience-section,
+    .projects-section,
+    .skills-section,
+    .education-section,
+    .certifications-section {
+      padding: 3.5rem 0 !important;
+      position: relative !important;
+      z-index: 2 !important;
+    }
+    #summary {
+      margin-top: 500px !important;
+    }
+
+    .container-max {
+      max-width: 1100px !important;
+      margin: 0 auto !important;
+      padding: 0 1rem !important;
+    }
+    .vertical-cards {
+      display: flex !important;
+      flex-direction: column !important;
+      gap: 1.75rem !important;
+    }
+    .grid-two {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)) !important;
+      gap: 1.5rem !important;
+    }
+    .grid-four {
+      display: grid !important;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)) !important;
+      gap: 1.5rem !important;
+    }
+
+    .card {
+      background: linear-gradient(145deg, rgba(14, 21, 45, 0.75) 0%, rgba(8, 12, 26, 0.85) 100%) !important;
+      backdrop-filter: blur(20px) !important;
+      -webkit-backdrop-filter: blur(20px) !important;
+      border: 1px solid var(--cosmic-border) !important;
+      box-shadow: 0 20px 50px -10px rgba(0, 0, 0, 0.65), 0 0 0 1px rgba(255, 255, 255, 0.04), inset 0 1px 0 rgba(255, 255, 255, 0.12) !important;
+      border-radius: 18px !important;
+      overflow: hidden !important;
+      transition: all 0.35s var(--ease-spring) !important;
+      position: relative !important;
+      width: 100% !important;
+    }
+    .card::before {
+      content: '' !important;
+      position: absolute !important;
+      top: 0 !important;
+      left: 0 !important;
+      right: 0 !important;
+      height: 1px !important;
+      background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent) !important;
+      pointer-events: none !important;
+    }
+    .card:hover {
+      transform: translateY(-5px) !important;
+      border-color: var(--cosmic-border-glow) !important;
+      box-shadow: 0 28px 65px -15px rgba(0, 0, 0, 0.8), 0 0 35px rgba(99, 102, 241, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.22) !important;
+    }
+
+    /* Card Headings */
+    .card .head {
+      background: linear-gradient(180deg, rgba(255, 255, 255, 0.04) 0%, rgba(255, 255, 255, 0.01) 100%) !important;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.07) !important;
+      padding: 1rem 1.4rem !important;
+      color: #ffffff !important;
+      font-family: var(--font-display) !important;
+      font-size: 15px !important;
+      font-weight: 700 !important;
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      letter-spacing: -0.01em !important;
+    }
+    .card .content {
+      padding: 1.35rem 1.5rem !important;
+    }
+
+    /* Experience Header Layout */
+    .experience-header {
+      display: flex !important;
+      justify-content: space-between !important;
+      align-items: center !important;
+      flex-wrap: wrap !important;
+      gap: 0.75rem !important;
+    }
+    .role-group {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.65rem !important;
+      flex-wrap: wrap !important;
+    }
+    .role-title {
+      margin: 0 !important;
+      font-family: var(--font-display) !important;
+      font-size: 16px !important;
+      font-weight: 700 !important;
+      color: #ffffff !important;
+      letter-spacing: -0.01em !important;
+    }
+    .meta-group {
+      display: flex !important;
+      align-items: center !important;
+      gap: 0.5rem !important;
+      flex-wrap: wrap !important;
+    }
+
+    /* Modern Micro-Bezel Badges */
+    .company-badge {
+      background: rgba(99, 102, 241, 0.15) !important;
+      color: #a5b4fc !important;
+      border: 1px solid rgba(129, 140, 248, 0.3) !important;
+      font-size: 11px !important;
+      font-weight: 700 !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.06em !important;
+      padding: 3px 9px !important;
+      border-radius: 9999px !important;
+    }
+    .founder-badge {
+      background: rgba(56, 189, 248, 0.15) !important;
+      color: #38bdf8 !important;
+      border-color: rgba(56, 189, 248, 0.35) !important;
+    }
+    .project-badge {
+      background: rgba(251, 191, 36, 0.15) !important;
+      color: #fde047 !important;
+      border-color: rgba(251, 191, 36, 0.35) !important;
+    }
+    .badge-timeline {
+      font-size: 12px !important;
+      font-weight: 500 !important;
+      color: var(--text-secondary) !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      padding: 3px 10px !important;
+      border-radius: 9999px !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+    }
+    .badge-location {
+      font-size: 12px !important;
+      font-weight: 500 !important;
+      color: var(--text-secondary) !important;
+    }
+    .badge-tech {
+      font-size: 11.5px !important;
+      font-weight: 600 !important;
+      color: #38bdf8 !important;
+      background: rgba(56, 189, 248, 0.08) !important;
+      padding: 3px 10px !important;
+      border-radius: 9999px !important;
+      border: 1px solid rgba(56, 189, 248, 0.2) !important;
+    }
+
+    /* Summary Section Specifics */
+    .summary-subtitle {
+      font-size: 14.5px !important;
+      font-weight: 700 !important;
+      color: var(--accent-indigo) !important;
+      margin-bottom: 0.8rem !important;
+      line-height: 1.4 !important;
+    }
+    .summary-bio {
+      font-size: 14px !important;
+      line-height: 1.7 !important;
+      color: #cbd5e1 !important;
+      margin-bottom: 1.25rem !important;
+    }
+    .summary-badges-wrap {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 0.6rem !important;
+      margin-top: 1rem !important;
+    }
+    .badge {
+      display: inline-flex !important;
+      align-items: center !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      border: 1px solid rgba(255, 255, 255, 0.12) !important;
+      color: var(--text-primary) !important;
+      font-size: 12.5px !important;
+      font-weight: 500 !important;
+      padding: 0.4rem 0.85rem !important;
+      border-radius: 9999px !important;
+      transition: all 0.2s var(--ease-spring) !important;
+    }
+    .badge:hover {
+      border-color: rgba(129, 140, 248, 0.4) !important;
+      background: rgba(129, 140, 248, 0.1) !important;
+      transform: translateY(-1px) !important;
+    }
+    .badge-highlight {
+      border-color: rgba(251, 191, 36, 0.3) !important;
+      color: #fde047 !important;
+      background: rgba(251, 191, 36, 0.08) !important;
+    }
+    .badge-accent {
+      border-color: rgba(56, 189, 248, 0.3) !important;
+      background: rgba(56, 189, 248, 0.08) !important;
+    }
+    .badge-link {
+      color: inherit !important;
+      text-decoration: none !important;
+    }
+
+    /* Clean Bullet Lists (ZERO corrupt characters, ZERO pseudo hacks) */
+    .card .content ul,
+    .experience-section .content ul,
+    .projects-section .content ul {
+      list-style-type: disc !important;
+      margin: 0.65rem 0 0.65rem 1.4rem !important;
+      padding: 0 !important;
+    }
+    .card .content li,
+    .experience-section .content li,
+    .projects-section .content li {
+      position: static !important;
+      padding-left: 0 !important;
+      margin-bottom: 0.65rem !important;
+      line-height: 1.65 !important;
+      color: #cbd5e1 !important;
+      font-size: 14px !important;
+    }
+    .card .content li::before,
+    .experience-section .content li::before,
+    .projects-section .content li::before {
+      display: none !important;
+      content: none !important;
+    }
+
+    /* Card Text Labels */
+    .tech-stack-label {
+      color: var(--accent-indigo) !important;
+      font-size: 12.5px !important;
+      font-weight: 600 !important;
+      margin-bottom: 0.75rem !important;
+    }
+    .card-desc {
+      font-size: 14px !important;
+      line-height: 1.65 !important;
+      color: #cbd5e1 !important;
+    }
+    .edu-institution {
+      font-weight: 700 !important;
+      color: var(--accent-indigo) !important;
+      font-size: 15px !important;
+      margin-bottom: 0.25rem !important;
+    }
+    .edu-timeline {
+      font-size: 13px !important;
+      color: var(--text-secondary) !important;
+      margin-bottom: 0.5rem !important;
+    }
+    .edu-gpa {
+      font-size: 14px !important;
+      color: var(--accent-emerald) !important;
+      font-weight: 700 !important;
+      margin-bottom: 0.6rem !important;
+    }
+
+    /* ==========================================================================
+       MODERN NESTED BUTTONS & SKILL CHIPS
+       ========================================================================== */
+    .skill-btn-wrap {
+      display: flex !important;
+      flex-wrap: wrap !important;
+      gap: 0.4rem !important;
+      align-items: flex-start !important;
+    }
+    .skill-button {
+      font-family: var(--font-sans) !important;
+      font-weight: 600 !important;
+      font-size: 12px !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      color: #e2e8f0 !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      padding: 0.42rem 0.95rem !important;
+      border-radius: 9999px !important;
+      margin: 0.15rem !important;
+      transition: all 0.25s var(--ease-spring) !important;
+      cursor: pointer !important;
+      display: inline-block !important;
+    }
+    .skill-button:hover {
+      background: rgba(56, 189, 248, 0.12) !important;
+      color: #ffffff !important;
+      border-color: rgba(56, 189, 248, 0.5) !important;
+      transform: translateY(-2px) !important;
+      box-shadow: 0 4px 16px rgba(56, 189, 248, 0.25) !important;
+    }
+    .skill-button:active {
+      transform: scale(0.97) !important;
+    }
+
+    /* Modern Gradient Action Buttons */
+    .project-button {
+      display: inline-flex !important;
+      align-items: center !important;
+      gap: 0.45rem !important;
+      font-family: var(--font-sans) !important;
+      font-weight: 600 !important;
+      font-size: 12.5px !important;
+      background: linear-gradient(135deg, #6366f1 0%, #0ea5e9 100%) !important;
+      color: #ffffff !important;
+      border: 1px solid rgba(255, 255, 255, 0.2) !important;
+      box-shadow: 0 4px 20px rgba(99, 102, 241, 0.35) !important;
+      padding: 0.48rem 1.15rem !important;
+      border-radius: 9999px !important;
+      text-decoration: none !important;
+      transition: all 0.25s var(--ease-spring) !important;
+      cursor: pointer !important;
+    }
+    .project-button:hover {
+      transform: translateY(-2px) !important;
+      box-shadow: 0 8px 25px rgba(14, 165, 233, 0.45) !important;
+      color: #ffffff !important;
+      filter: brightness(1.1) !important;
+    }
+
+    /* Section Title Spacing & Gradient Text */
+    .section-header-wrap {
+      text-align: center !important;
+      margin-bottom: 2.25rem !important;
+    }
+    .eyebrow {
+      font-family: var(--font-display) !important;
+      font-size: 11px !important;
+      text-transform: uppercase !important;
+      letter-spacing: 0.2em !important;
+      color: var(--accent-cyan) !important;
+      font-weight: 700 !important;
+      margin-bottom: 0.4rem !important;
+      display: inline-block !important;
+    }
+    .section-title {
+      font-family: var(--font-display) !important;
+      font-size: clamp(2.2rem, 5vw, 3rem) !important;
+      font-weight: 800 !important;
+      text-align: center !important;
+      margin: 0 !important;
+      letter-spacing: -0.03em !important;
+      background: linear-gradient(180deg, #ffffff 40%, rgba(255, 255, 255, 0.65) 100%) !important;
+      -webkit-background-clip: text !important;
+      -webkit-text-fill-color: transparent !important;
+      position: relative !important;
+    }
+
+    /* Footer Styling */
+    .footer {
+      padding: 4rem 1rem 3rem !important;
+      position: relative !important;
+      z-index: 2 !important;
+      border-top: 1px solid rgba(255, 255, 255, 0.08) !important;
+      background: rgba(3, 6, 17, 0.95) !important;
+      backdrop-filter: blur(20px) !important;
+    }
+    .footer-content {
+      max-width: 900px !important;
+      margin: 0 auto !important;
+      display: flex !important;
+      flex-direction: column !important;
+      align-items: center !important;
+      gap: 1.5rem !important;
+      text-align: center !important;
+    }
+    .footer-info {
+      font-size: 14px !important;
+      color: var(--text-secondary) !important;
+      line-height: 1.8 !important;
+    }
+    .footer-link {
+      color: var(--accent-indigo) !important;
+      text-decoration: none !important;
+    }
+    .social-links {
+      display: flex !important;
+      gap: 1rem !important;
+      justify-content: center !important;
+      align-items: center !important;
+    }
+    .social-icon {
+      width: 20px !important;
+      height: 20px !important;
+      filter: invert(1) brightness(0.85) !important;
+      transition: transform 0.2s var(--ease-spring), filter 0.2s ease !important;
+    }
+    .social-link {
+      display: inline-flex !important;
+      align-items: center !important;
+      justify-content: center !important;
+      width: 38px !important;
+      height: 38px !important;
+      border-radius: 50% !important;
+      background: rgba(255, 255, 255, 0.05) !important;
+      border: 1px solid rgba(255, 255, 255, 0.1) !important;
+      transition: all 0.25s var(--ease-spring) !important;
+    }
+    .social-link:hover {
+      background: rgba(129, 140, 248, 0.2) !important;
+      border-color: rgba(129, 140, 248, 0.4) !important;
+      transform: translateY(-2px) !important;
+    }
+    .social-link:hover .social-icon {
+      transform: scale(1.1) !important;
+      filter: invert(1) brightness(1) !important;
+    }
+    .copyright {
+      font-size: 13px !important;
+      color: var(--text-tertiary) !important;
+      margin-top: 0.5rem !important;
+    }
+
+    /* ==========================================================================
+       MOBILE & TABLET RESPONSIVENESS
+       ========================================================================== */
+    @media (max-width: 1024px) {
+      .site-header {
+        top: 0.75rem !important;
+        padding: 0.5rem 1rem !important;
+        border-radius: 16px !important;
+        width: calc(100% - 1.5rem) !important;
+      }
+      .header-container {
+        flex-direction: column !important;
+        align-items: stretch !important;
+        gap: 0.4rem !important;
+      }
+      .nav-links {
+        overflow-x: auto !important;
+        -webkit-overflow-scrolling: touch !important;
+        gap: 0.4rem !important;
+        scrollbar-width: none !important;
+        padding-bottom: 2px !important;
+      }
+      .nav-links::-webkit-scrollbar {
+        display: none !important;
+      }
+      .nav-links a {
+        font-size: 12px !important;
+        padding: 0.3rem 0.65rem !important;
+        background: rgba(255, 255, 255, 0.05) !important;
+        flex-shrink: 0 !important;
+      }
+    }
+
+    @media (max-width: 768px) {
+      #summary {
+        margin-top: 360px !important;
+        padding-top: 1rem !important;
+      }
+      .section-title {
+        font-size: 1.9rem !important;
+        margin-bottom: 1.5rem !important;
+      }
+      .card {
+        border-radius: 14px !important;
+      }
+      .card .head {
+        padding: 0.85rem 1rem !important;
+      }
+      .experience-header {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.35rem !important;
+      }
+      .role-group {
+        width: 100% !important;
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 0.3rem !important;
+      }
+      .role-title {
+        font-size: 14.5px !important;
+        line-height: 1.35 !important;
+      }
+      .meta-group {
+        width: 100% !important;
+        gap: 0.3rem !important;
+      }
+      .card .content {
+        padding: 1rem !important;
+      }
+      .card .content li {
+        font-size: 13.5px !important;
+        margin-bottom: 0.5rem !important;
+      }
+      .skill-button {
+        font-size: 11.5px !important;
+        padding: 0.35rem 0.75rem !important;
+      }
+    }
+  </style>
+</body>
 </html>
